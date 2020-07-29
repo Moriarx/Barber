@@ -1,10 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap');
 @import 'hero';
 @import 'header';
 @import 'media';
 @import 'animations';
 
-*,*::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -14,11 +16,102 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-.container {
-    width: 80%;
-    margin: 2rem auto;
 
-    p {
-        margin: 1rem 0;
+//MEDIA 
+
+
+//ANIMATIONS
+
+
+//HEADER
+
+//HERO
+
+
+//***********************MAIN********************
+//ABOUT US
+
+
+#aboutus {
+    text-align: center;
+    width: 100%;
+
+    .aboutus__text {
+        width: 80%;
+        margin: 4rem auto;
+
+        h2 {
+            font-size: 2rem;
+            margin: 1rem 0 4rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin: 1rem 0;
+            font-style: italic;
+        }
+
+        .sentence::before,
+        .sentence::after {
+            content: "";
+            display: inline-block;
+            width: 20px;
+            height: 1px;
+            border-bottom: 1px solid #000000;
+            margin: 0 14px 4px;
+        }
+
+        .sentence-long {
+            margin-bottom: 10rem;
+            color: rgb(151, 81, 0)
+        }
     }
+
+    .aboutus-long {
+        display: flex;
+
+        .aboutus__img {
+            height: 58vh;
+            flex-grow: 1;
+            background: url('../img/aboutus-hd.jpg') no-repeat bottom center;
+            background-size: cover;               
+        }
+
+        .aboutus-team {
+            height: 58vh;
+            flex-basis: 50%;
+            background: #000;
+
+            h3 {
+                position: relative;
+                display: inline-block;
+                margin-top: 3rem;
+                font-size: 1.5rem;
+                color: white;
+                text-transform: uppercase;
+                
+            }
+
+            h3::after{
+                content:'';
+                height: 3px;
+                width: 100%;
+                background: #fff;
+                position: absolute;
+                left:calc(50% - 50%);
+                bottom:-2px;
+            }
+
+            p {
+                margin: 4vw;
+                text-align: justify;
+                line-height: 35px;
+                letter-spacing: 2px;
+                color: #fff;
+                font-size: 1.2rem;
+            }
+            
+        }
+    }
+
 }

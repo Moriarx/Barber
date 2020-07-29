@@ -6,14 +6,24 @@
     height: 65px;
     width: 100vw;
     padding: 0 10vw;
-    color: #000;
+    color: #fff;
     z-index: 1;
     transition: .4s ease-out;
+
+
+    .fa-cut {
+        padding: 15px;
+        font-size: 40px;
+        transition: .4s ease-out;
+
+    }
+
 
     a {
         text-decoration: none;
         color: inherit;
         text-transform: uppercase;
+        font-weight: bold;
     }
 
     .nav-links {
@@ -25,21 +35,25 @@
                 opacity .4s ease-in-out,
                 transform .6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
-                &:nth-of-type(2) {
-                    transition-delay: .1s;
-                }
-                &:nth-of-type(3) {
-                    transition-delay: .2s;
-                }
-                &:nth-of-type(4) {
-                    transition-delay: .3s;
-                }
-                &:nth-of-type(5) {
-                    transition-delay: .4s;
-                }
-                &:nth-of-type(6) {
-                    transition-delay: .5s;
-                }
+            &:nth-of-type(2) {
+                transition-delay: .1s;
+            }
+
+            &:nth-of-type(3) {
+                transition-delay: .2s;
+            }
+
+            &:nth-of-type(4) {
+                transition-delay: .3s;
+            }
+
+            &:nth-of-type(5) {
+                transition-delay: .4s;
+            }
+
+            &:nth-of-type(6) {
+                transition-delay: .5s;
+            }
 
             a {
                 margin: .2rem;
@@ -49,7 +63,6 @@
             a:hover {
                 background: rgba(255, 255, 255, 0.2);
             }
-
         }
     }
 
@@ -58,7 +71,7 @@
         padding: 26px 10px;
         cursor: pointer;
         z-index: 1;
-        display:none;
+        display: none;
 
         &__line {
             display: block;
@@ -93,12 +106,13 @@
         position: absolute;
         top: -100px;
 
-        &:focus ~ .menu-icon {
+        &:focus~.menu-icon {
             .menu-icon__line {
-                &::before{
+                &::before {
                     transform: translateY(-7px);
                 }
-                &::after{
+
+                &::after {
                     transform: translateY(7px);
                 }
             }
@@ -109,6 +123,11 @@
         height: 65px;
         background: rgba(0, 0, 0, 0.9);
         color: #fff;
+
+        .fa-cut {
+            color: red;
+        }
+
 
         .menu-icon {
 

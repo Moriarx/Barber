@@ -1,5 +1,5 @@
+//Adding a black bar over menu while scrolling down.
 const header = document.querySelector('.main-header');
-
 window.addEventListener('scroll', () => {
     const scrollPosition = window.scrollY;
     if(scrollPosition > 10){
@@ -7,4 +7,6 @@ window.addEventListener('scroll', () => {
     } else {
         header.classList.remove('scrolled');
     }
-})
+});
+
+

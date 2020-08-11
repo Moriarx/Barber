@@ -1,72 +1,210 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=
-    , initial-scale=1.0">
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
     <title>Document</title>
-    <script src="https://kit.fontawesome.com/164add3b85.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./scss/main.css">
-</head>
+    <script
+      src="https://kit.fontawesome.com/164add3b85.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://polyfill.io/v3/polyfill.min.js?features=default"
+      defer
+    ></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUZ5y_iHnUyGeTvuVWOplPD8q8-j4CUq0&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./scss/main.css" />
+  </head>
 
-<body>
+  <body>
     <header class="main-header">
-        <div class="logo">
-            <a href="#"><i class="fas fa-cut"></i></a>
-        </div>
-        <input type="checkbox" class="menu-btn" id="menu-btn">
-        <label for="menu-btn" class="menu-icon">
-            <span class="menu-icon__line"></span>
-        </label>
-        <ul class="nav-links">
-            <li class="nav-link">
-                <a href="#">home</a>
-            </li>
-            <li class="nav-link">
-                <a href="#">about</a>
-            </li>
-            <li class="nav-link">
-                <a href="#">services</a>
-            </li>
-            <li class="nav-link">
-                <a href="#">gallery</a>
-            </li>
-            <li class="nav-link">
-                <a href="#">team</a>
-            </li>
-            <li class="nav-link">
-                <a href="#">contact</a>
-            </li>
-        </ul>
-
+      <div class="logo">
+        <a href="#"><i class="fas fa-cut"></i></a>
+      </div>
+      <input type="checkbox" class="menu-btn" id="menu-btn" />
+      <label for="menu-btn" class="menu-icon">
+        <span class="menu-icon__line"></span>
+      </label>
+      <ul class="nav-links">
+        <li class="nav-link">
+          <a href="#">home</a>
+        </li>
+        <li class="nav-link">
+          <a href="#">about</a>
+        </li>
+        <li class="nav-link">
+          <a href="#">services</a>
+        </li>
+        <li class="nav-link">
+          <a href="#">gallery</a>
+        </li>
+        <li class="nav-link">
+          <a href="#">team</a>
+        </li>
+        <li class="nav-link">
+          <a href="#">contact</a>
+        </li>
+      </ul>
     </header>
     <div class="hero">
-        <h1>perfect<span class="hero-text">cut</span></h1>
-        <a href="#"><i class="fas fa-angle-double-down"></i></a>
+      <h1>perfect<span class="hero-text">cut</span></h1>
+      <a href="#"><i class="fas fa-angle-double-down"></i></a>
     </div>
     <main>
-        <section id="aboutus">
-            <div class="aboutus__text">
-                <p class="sentence">Introducing</p>
-                <h2>Perfect Cut Barber</h2>
-                <p class="sentence-long">Barber is a person whose occupation is mainly to cut, dress, groom, style and
-                    shave men's and boys' hair or beard.</p>
-            </div>
-            <div class="aboutus-long">
-                <div class="aboutus__img"></div>
-                <div class="aboutus-team">
-                    <h3 class="underline">About us</h3>
-                    <p>Our unparalleled team of expert barbers has personal pride riding on each haircut and hot lather
-                        shave. No one on Tweed Barbers’ staff has been cutting hair fewer than 10 years. We’ve seen it
-                        all and can do it all. We are about substance and skill, not gimmicks. We like to have fun, but
-                        we take our work seriously. Scantily-clad female stylists who press their cleavage in your face
-                        at the shampoo bowl? Sorry pal, you won't find that here...</p>
+      <section id="aboutus">
+        <div class="aboutus__text">
+          <p class="sentence">Introducing</p>
+          <h2 class="h2-title">Perfect Cut Barber</h2>
+          <p class="sentence-long">
+            Barber is a person whose occupation is mainly to cut, dress, groom,
+            style and shave men's and boys' hair or beard.
+          </p>
+        </div>
+        <div class="aboutus-main">
+          <div class="aboutus__img"></div>
+          <div class="aboutus-team">
+            <h3 class="underline">About us</h3>
+            <p>
+              Our unparalleled team of expert barbers has personal pride riding
+              on each haircut and hot lather shave. No one on Tweed Barbers’
+              staff has been cutting hair fewer than 10 years. We’ve seen it all
+              and can do it all. We are about substance and skill, not gimmicks.
+              We like to have fun, but we take our work seriously. Scantily-clad
+              female stylists who press their cleavage in your face at the
+              shampoo bowl? Sorry pal, you won't find that here...
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="contact">
+        <div class="aboutus__text">
+          <p class="sentence">Meet us</p>
+          <h2 class="h2-title">Contact Information</h2>
+          <p class="sentence-long">
+            We are open 24h 7 days a week. First haircut is for free. Come visit
+            us now.
+          </p>
+        </div>
+        <div class="contact-main">
+          <div class="contact-map"></div>
+          <div class="aboutus-team">
+            <h3 class="underline">Contact</h3>
+            <p>
+              Our unparalleled team of expert barbers has personal pride riding
+              on each haircut and hot lather shave. No one on Tweed Barbers’
+              staff has been cutting hair fewer than 10 years. We’ve seen it all
+              and can do it all. We are about substance and skill, not gimmicks.
+              We like to have fun, but we take our work seriously. Scantily-clad
+              female stylists who press their cleavage in your face at the
+              shampoo bowl? Sorry pal, you won't find that here...
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="contact">
+        <div class="aboutus__text">
+          <p class="sentence">Introducing</p>
+          <h2 class="h2-title">New Booking Feature</h2>
+          <p class="sentence-long">
+            You can now book online whenever you like! No more phone calls,
+            waiting on a line and asking if we're free! The booking has never
+            been easier before.
+          </p>
+        </div>
+        <div class="contact-main">
+          <div class="booking container">
+            <div class="calendar">
+              <div class="month">
+                <i class="fas fa-angle-left prev"></i>
+                <div class="date">
+                  <h2></h2>
+                  <p></p>
                 </div>
+                <i class="fas fa-angle-right next"></i>
+              </div>
+              <div class="weekdays">
+                <div>Sun</div>
+                <div>Mon</div>
+                <div>Tue</div>
+                <div>Wed</div>
+                <div>Thu</div>
+                <div>Fri</div>
+                <div>Sat</div>
+              </div>
+              <div class="days">
+                <!-- <div class="prev-date">26</div>
+                <div class="prev-date">27</div>
+                <div class="prev-date">28</div>
+                <div class="prev-date">29</div>
+                <div class="prev-date">30</div>
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+                <div>10</div>
+                <div>11</div>
+                <div>12</div>
+                <div>13</div>
+                <div>14</div>
+                <div>15</div>
+                <div>16</div>
+                <div>17</div>
+                <div>18</div>
+                <div>19</div>
+                <div>20</div>
+                <div>21</div>
+                <div>22</div>
+                <div>23</div>
+                <div>24</div>
+                <div>25</div>
+                <div>26</div>
+                <div>27</div>
+                <div>28</div>
+                <div class = "today">29</div>
+                <div>30</div>
+                <div>31</div>
+                <div class="next-date">1</div>
+                <div class="next-date">2</div>
+                <div class="next-date">3</div>
+                <div class="next-date">4</div>
+                <div class="next-date">5</div>
+                <div class="next-date">6</div> -->
+              </div>
             </div>
-        </section>
+          </div>
+          <div class="aboutus-team">
+            <h3 class="underline">Contact</h3>
+            <p>
+              Our unparalleled team of expert barbers has personal pride riding
+              on each haircut and hot lather shave. No one on Tweed Barbers’
+              staff has been cutting hair fewer than 10 years. We’ve seen it all
+              and can do it all. We are about substance and skill, not gimmicks.
+              We like to have fun, but we take our work seriously. Scantily-clad
+              female stylists who press their cleavage in your face at the
+              shampoo bowl? Sorry pal, you won't find that here...
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
     <script src="./main.js"></script>
-</body>
-
+  </body>
 </html>

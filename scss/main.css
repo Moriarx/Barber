@@ -326,19 +326,16 @@
   .hero h1 {
     font-size: 2rem;
   }
-  .aboutus-long {
+  .aboutus-main {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .aboutus-long .aboutus-team {
+  .aboutus-main .aboutus-team {
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
             order: -1;
-  }
-  .aboutus-long .aboutus-team p {
-    color: #fff;
   }
 }
 
@@ -542,32 +539,38 @@
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
-#aboutus {
+#aboutus,
+#contact {
   text-align: center;
   width: 100%;
 }
 
-#aboutus .aboutus__text {
+#aboutus .aboutus__text,
+#contact .aboutus__text {
   width: 80%;
   margin: 4rem auto;
 }
 
-#aboutus .aboutus__text h2 {
+#aboutus .aboutus__text .h2-title,
+#contact .aboutus__text .h2-title {
   font-size: 2rem;
   margin: 1rem 0 4rem;
 }
 
-#aboutus .aboutus__text p {
+#aboutus .aboutus__text p,
+#contact .aboutus__text p {
   font-size: 1.1rem;
   margin: 1rem 0;
   font-style: italic;
 }
 
 #aboutus .aboutus__text .sentence::before,
-#aboutus .aboutus__text .sentence::after {
+#aboutus .aboutus__text .sentence::after,
+#contact .aboutus__text .sentence::before,
+#contact .aboutus__text .sentence::after {
   content: "";
   display: inline-block;
   width: 20px;
@@ -576,18 +579,25 @@ body {
   margin: 0 14px 4px;
 }
 
-#aboutus .aboutus__text .sentence-long {
+#aboutus .aboutus__text .sentence-long,
+#contact .aboutus__text .sentence-long {
   margin-bottom: 10rem;
   color: #975100;
 }
 
-#aboutus .aboutus-long {
+#aboutus .aboutus-main,
+#aboutus .contact-main,
+#contact .aboutus-main,
+#contact .contact-main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-#aboutus .aboutus-long .aboutus__img {
+#aboutus .aboutus-main .aboutus__img,
+#aboutus .contact-main .aboutus__img,
+#contact .aboutus-main .aboutus__img,
+#contact .contact-main .aboutus__img {
   height: 58vh;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
@@ -596,14 +606,20 @@ body {
   background-size: cover;
 }
 
-#aboutus .aboutus-long .aboutus-team {
+#aboutus .aboutus-main .aboutus-team,
+#aboutus .contact-main .aboutus-team,
+#contact .aboutus-main .aboutus-team,
+#contact .contact-main .aboutus-team {
   height: 58vh;
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
   background: #000;
 }
 
-#aboutus .aboutus-long .aboutus-team h3 {
+#aboutus .aboutus-main .aboutus-team h3,
+#aboutus .contact-main .aboutus-team h3,
+#contact .aboutus-main .aboutus-team h3,
+#contact .contact-main .aboutus-team h3 {
   position: relative;
   display: inline-block;
   margin-top: 3rem;
@@ -612,8 +628,11 @@ body {
   text-transform: uppercase;
 }
 
-#aboutus .aboutus-long .aboutus-team h3::after {
-  content: '';
+#aboutus .aboutus-main .aboutus-team h3::after,
+#aboutus .contact-main .aboutus-team h3::after,
+#contact .aboutus-main .aboutus-team h3::after,
+#contact .contact-main .aboutus-team h3::after {
+  content: "";
   height: 3px;
   width: 100%;
   background: #fff;
@@ -622,12 +641,170 @@ body {
   bottom: -2px;
 }
 
-#aboutus .aboutus-long .aboutus-team p {
+#aboutus .aboutus-main .aboutus-team p,
+#aboutus .contact-main .aboutus-team p,
+#contact .aboutus-main .aboutus-team p,
+#contact .contact-main .aboutus-team p {
   margin: 4vw;
   text-align: justify;
   line-height: 35px;
   letter-spacing: 2px;
   color: #fff;
   font-size: 1.2rem;
+}
+
+#map {
+  width: 300px;
+  height: 300px;
+}
+
+.contact-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contact-map {
+  height: 58vh;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  background: no-repeat bottom center;
+  background-size: cover;
+}
+
+.booking-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.booking {
+  height: 58vh;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  background: #12121f;
+  color: #eee;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.calendar {
+  width: 45rem;
+  height: 58vh;
+  background-color: #222227;
+}
+
+.month {
+  width: 100%;
+  height: 12rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.month i {
+  font-size: 35px;
+  padding: 40px;
+  cursor: pointer;
+}
+
+.month h2 {
+  font-size: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.month p {
+  font-size: 16px;
+}
+
+.weekdays {
+  width: 100%;
+  height: 5rem;
+  padding: 0 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.weekdays div {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  width: calc(720px/7);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.days {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.days div {
+  font-size: 14px;
+  margin-top: 3px;
+  height: 70px;
+  width: calc(720px/7);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: background-color .2s;
+  transition: background-color .2s;
+}
+
+.days div:hover:not(.today) {
+  background-color: #262626;
+  border: 2px solid #777;
+  cursor: pointer;
+}
+
+.prev-date,
+.next-date {
+  opacity: 0.5;
+}
+
+.today {
+  background-color: #975100;
 }
 /*# sourceMappingURL=main.css.map */

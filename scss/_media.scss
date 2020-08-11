@@ -117,16 +117,11 @@
         font-size: 2rem;
     }
     //MAIN 
-    .aboutus-long {
+    .aboutus-main {
         flex-direction: column;
 
         .aboutus-team {
-            order: -1;
-
-            p {
-                color: #fff;
-            }
-            
+            order: -1;            
         }
     }
 }

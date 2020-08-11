@@ -1,117 +1,227 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap');
-@import 'hero';
-@import 'header';
-@import 'media';
-@import 'animations';
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap");
+@import "hero";
+@import "header";
+@import "media";
+@import "booking";
+@import "animations";
 
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
-
-//MEDIA 
-
+//MEDIA
 
 //ANIMATIONS
-
 
 //HEADER
 
 //HERO
 
-
 //***********************MAIN********************
 //ABOUT US
 
+#aboutus,
+#contact {
+  text-align: center;
+  width: 100%;
 
-#aboutus {
-    text-align: center;
-    width: 100%;
+  .aboutus__text {
+    width: 80%;
+    margin: 4rem auto;
 
-    .aboutus__text {
-        width: 80%;
-        margin: 4rem auto;
-
-        h2 {
-            font-size: 2rem;
-            margin: 1rem 0 4rem;
-        }
-
-        p {
-            font-size: 1.1rem;
-            margin: 1rem 0;
-            font-style: italic;
-        }
-
-        .sentence::before,
-        .sentence::after {
-            content: "";
-            display: inline-block;
-            width: 20px;
-            height: 1px;
-            border-bottom: 1px solid #000000;
-            margin: 0 14px 4px;
-        }
-
-        .sentence-long {
-            margin-bottom: 10rem;
-            color: rgb(151, 81, 0)
-        }
+    .h2-title {
+      font-size: 2rem;
+      margin: 1rem 0 4rem;
     }
 
-    .aboutus-long {
-        display: flex;
-
-        .aboutus__img {
-            height: 58vh;
-            flex-grow: 1;
-            background: url('../img/aboutus-hd.jpg') no-repeat bottom center;
-            background-size: cover;               
-        }
-
-        .aboutus-team {
-            height: 58vh;
-            flex-basis: 50%;
-            background: #000;
-
-            h3 {
-                position: relative;
-                display: inline-block;
-                margin-top: 3rem;
-                font-size: 1.5rem;
-                color: white;
-                text-transform: uppercase;
-                
-            }
-
-            h3::after{
-                content:'';
-                height: 3px;
-                width: 100%;
-                background: #fff;
-                position: absolute;
-                left:calc(50% - 50%);
-                bottom:-2px;
-            }
-
-            p {
-                margin: 4vw;
-                text-align: justify;
-                line-height: 35px;
-                letter-spacing: 2px;
-                color: #fff;
-                font-size: 1.2rem;
-            }
-            
-        }
+    p {
+      font-size: 1.1rem;
+      margin: 1rem 0;
+      font-style: italic;
     }
 
+    .sentence::before,
+    .sentence::after {
+      content: "";
+      display: inline-block;
+      width: 20px;
+      height: 1px;
+      border-bottom: 1px solid #000000;
+      margin: 0 14px 4px;
+    }
+
+    .sentence-long {
+      margin-bottom: 10rem;
+      color: rgb(151, 81, 0);
+    }
+  }
+
+  .aboutus-main,
+  .contact-main {
+    display: flex;
+
+    .aboutus__img {
+      height: 58vh;
+      flex-grow: 1;
+      background: url("../img/aboutus-hd.jpg") no-repeat bottom center;
+      background-size: cover;
+    }
+
+    .aboutus-team {
+      height: 58vh;
+      flex-basis: 50%;
+      background: #000;
+
+      h3 {
+        position: relative;
+        display: inline-block;
+        margin-top: 3rem;
+        font-size: 1.5rem;
+        color: white;
+        text-transform: uppercase;
+      }
+
+      h3::after {
+        content: "";
+        height: 3px;
+        width: 100%;
+        background: #fff;
+        position: absolute;
+        left: calc(50% - 50%);
+        bottom: -2px;
+      }
+
+      p {
+        margin: 4vw;
+        text-align: justify;
+        line-height: 35px;
+        letter-spacing: 2px;
+        color: #fff;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+#map {
+  width: 300px;
+  height: 300px;
+}
+
+.contact-main {
+  display: flex;
+}
+
+.contact-map {
+  height: 58vh;
+  flex-grow: 1;
+  background: no-repeat bottom center;
+  background-size: cover;
+}
+
+.booking-main {
+  display: flex;
+}
+.booking {
+  height: 58vh;
+  flex-grow: 1;
+  background: #333
+  color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calendar {
+  width: 45rem;
+  height: 58vh;
+  background-color: #222227;
+}
+
+.month {
+  width: 100%;
+  height: 12rem;
+  background-color: rgba(0,0,0, .4s);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.month i {
+  font-size: 35px;
+  padding: 40px;
+  cursor: pointer;
+}
+
+.month h2 {
+  font-size: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.month p {
+  font-size: 16px;
+}
+
+.weekdays {
+  width: 100%;
+  height: 5rem;
+  padding: 0 4px;
+  display: flex;
+  align-items: center;
+}
+
+.weekdays div {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  width: calc(720px/7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.days {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+//   padding: 2px;
+}
+
+.days div {
+  font-size: 14px;
+  margin-top: 3px;
+  height: 70px;
+  width: calc(720px/7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color .2s;
+}
+
+.days div:hover:not(.today) {
+    background-color: #262626;
+    border: 2px solid #777;
+    cursor: pointer;
+}
+
+.prev-date,
+.next-date {
+    opacity: 0.5;
+}
+
+.today {
+    background-color: #975100;
 }

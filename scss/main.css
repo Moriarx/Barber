@@ -684,7 +684,7 @@ body {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  background: #12121f;
+  background: #333;
   color: #eee;
   display: -webkit-box;
   display: -ms-flexbox;

@@ -134,13 +134,13 @@ body {
   justify-content: center;
   align-items: center;
   flex-grow: 1;
-  height: 58vh;
+  // height: 58vh;
   color: #eee;
   background: #333;
 }
 
 .calendar {
-  height: 58vh;
+  // height: 58vh;
   background-color: #222227;
 }
 
@@ -148,7 +148,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  // width: 100%;
+  width: 100%;
   height: 18vh;
   padding: 0 20px;
   text-align: center;
@@ -157,7 +157,7 @@ body {
 
 .month i {
   font-size: 35px;
-  padding: 40px;
+  padding: 30px;
   cursor: pointer;
 }
 
@@ -176,16 +176,17 @@ body {
 .weekdays {
   display: flex;
   align-items: center;
+  justify-content: space-evenly;
   // width: 100%;
   height: 5rem;
-  padding: 0 4px; //4
+  padding: 0 2px; //4
 }
 
 .weekdays div {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
   letter-spacing: 1px;
-  width: calc((100% - 8px)/7);
+  width: calc(100% / 7);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -200,7 +201,7 @@ body {
 .days div {
   font-size: 14px;
   margin-top: 3px;
-  height: 70px;
+  height: 50px;
   width: calc(100%/7);
   display: flex;
   justify-content: center;

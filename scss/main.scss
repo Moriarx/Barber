@@ -112,8 +112,7 @@ body {
 }
 
 #map {
-  width: 300px;
-  height: 300px;
+  height: 58vh;
 }
 
 .contact-main {
@@ -131,30 +130,29 @@ body {
   display: flex;
 }
 .booking {
-  height: 58vh;
-  flex-grow: 1;
-  background: #333;
-  color: #eee;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-grow: 1;
+  height: 58vh;
+  color: #eee;
+  background: #333;
 }
 
 .calendar {
-  width: 45rem;
   height: 58vh;
   background-color: #222227;
 }
 
 .month {
-  width: 100%;
-  height: 12rem;
-  background-color: rgba(0,0,0, .4s);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  // width: 100%;
+  height: 18vh;
   padding: 0 20px;
   text-align: center;
+  background-color: rgba(0,0,0, .4s);
 }
 
 .month i {
@@ -164,7 +162,7 @@ body {
 }
 
 .month h2 {
-  font-size: 30px;
+  font-size: 26px;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -172,29 +170,28 @@ body {
 }
 
 .month p {
-  font-size: 16px;
+  font-size: 12px;
 }
 
 .weekdays {
-  width: 100%;
-  height: 5rem;
-  padding: 0 4px;
   display: flex;
   align-items: center;
+  // width: 100%;
+  height: 5rem;
+  padding: 0 4px; //4
 }
 
 .weekdays div {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   letter-spacing: 1px;
-  width: calc(720px/7);
+  width: calc((100% - 8px)/7);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .days {
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
 //   padding: 2px;
@@ -204,7 +201,7 @@ body {
   font-size: 14px;
   margin-top: 3px;
   height: 70px;
-  width: calc(720px/7);
+  width: calc(100%/7);
   display: flex;
   justify-content: center;
   align-items: center;

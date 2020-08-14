@@ -247,10 +247,10 @@
     font-size: 2rem;
     color: #fff;
     background: #272727;
-    -webkit-transition: opacity .8s .5s, -webkit-clip-path 1s .5s;
-    transition: opacity .8s .5s, -webkit-clip-path 1s .5s;
-    transition: opacity .8s .5s, clip-path 1s .5s;
-    transition: opacity .8s .5s, clip-path 1s .5s, -webkit-clip-path 1s .5s;
+    -webkit-transition: opacity .8s .5s, -webkit-clip-path 1s .5s;
+    transition: opacity .8s .5s, -webkit-clip-path 1s .5s;
+    transition: opacity .8s .5s, clip-path 1s .5s;
+    transition: opacity .8s .5s, clip-path 1s .5s, -webkit-clip-path 1s .5s;
     -webkit-clip-path: circle(200px at top right);
             clip-path: circle(200px at top right);
   }
@@ -337,6 +337,13 @@
         -ms-flex-order: -1;
             order: -1;
   }
+}
+
+.contact-main {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 @-webkit-keyframes pulse {
@@ -654,8 +661,7 @@ body {
 }
 
 #map {
-  width: 300px;
-  height: 300px;
+  height: 58vh;
 }
 
 .contact-main {
@@ -680,12 +686,6 @@ body {
 }
 
 .booking {
-  height: 58vh;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  background: #333;
-  color: #eee;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -695,18 +695,20 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  height: 58vh;
+  color: #eee;
+  background: #333;
 }
 
 .calendar {
-  width: 45rem;
   height: 58vh;
   background-color: #222227;
 }
 
 .month {
-  width: 100%;
-  height: 12rem;
-  background-color: rgba(0, 0, 0, 0.4);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -716,8 +718,10 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 18vh;
   padding: 0 20px;
   text-align: center;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .month i {
@@ -727,7 +731,7 @@ body {
 }
 
 .month h2 {
-  font-size: 30px;
+  font-size: 26px;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -735,26 +739,25 @@ body {
 }
 
 .month p {
-  font-size: 16px;
+  font-size: 12px;
 }
 
 .weekdays {
-  width: 100%;
-  height: 5rem;
-  padding: 0 4px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 5rem;
+  padding: 0 4px;
 }
 
 .weekdays div {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   letter-spacing: 1px;
-  width: calc(720px/7);
+  width: calc((100% - 8px)/7);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -767,7 +770,6 @@ body {
 }
 
 .days {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -779,7 +781,7 @@ body {
   font-size: 14px;
   margin-top: 3px;
   height: 70px;
-  width: calc(720px/7);
+  width: calc(100%/7);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -134,7 +134,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-grow: 1;
-   // height: 58vh;
+  // height: 58vh;
   color: #eee;
   background: #333;
 }
@@ -178,7 +178,7 @@ body {
   align-items: center;
   justify-content: space-evenly;
   height: 5rem;
-  padding: 0 2px; 
+  padding: 0 2px;
 }
 
 .weekdays div {
@@ -204,20 +204,14 @@ body {
   height: 50px;
   margin-top: 3px;
   font-size: 14px;
-  transition: background-color 0.1s;
+  transition: background-color 0.2s;
 }
 
-.days div:hover:not(.today) {
+.days div:hover:not(.today):not(.selected) {
   background-color: #262626;
   border: 2px solid #777;
   cursor: pointer;
 }
-
-// .days div:hover:not(.selected){
-//   background-color: #262626;
-//   border: 2px solid #777;
-//   cursor: pointer;
-// }
 
 .prev-date,
 .next-date {

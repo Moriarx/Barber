@@ -21,6 +21,7 @@ function initMap() {
 //CALENDAR
 
 const monthDays = document.querySelector(".days");
+
 const date = new Date();
 
 const renderCalendar = () => {
@@ -115,12 +116,12 @@ document.querySelector(".next").addEventListener("click", () => {
   renderCalendar();
 });
 
-const days = document.querySelectorAll(".day");
-
-//adds selected day background on click
-days.forEach((day) =>
-  day.addEventListener("click", () => {
-    days.forEach((day) => day.classList.remove("selected"));
-    day.classList.add("selected");
-  })
-);
+//get a selected background on click
+const days = document.getElementsByClassName("day");
+document.addEventListener("click", function (e) {
+  if (!e.target.classList.contains("day")) return;
+  for (let i = 0; i < days.length; i++) {
+    days[i].classList.remove("selected");
+    e.target.classList.add("selected");
+  }
+});

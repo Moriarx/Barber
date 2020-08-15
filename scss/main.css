@@ -819,11 +819,11 @@ body {
   height: 50px;
   margin-top: 3px;
   font-size: 14px;
-  -webkit-transition: background-color 0.1s;
-  transition: background-color 0.1s;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
 }
 
-.days div:hover:not(.today) {
+.days div:hover:not(.today):not(.selected) {
   background-color: #262626;
   border: 2px solid #777;
   cursor: pointer;

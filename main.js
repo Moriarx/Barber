@@ -20,12 +20,11 @@ function initMap() {
 
 //CALENDAR
 
+const monthDays = document.querySelector(".days");
 const date = new Date();
 
 const renderCalendar = () => {
   date.setDate(1);
-
-  const monthDays = document.querySelector(".days");
 
   const lastDay = new Date(
     date.getFullYear(),
@@ -68,6 +67,7 @@ const renderCalendar = () => {
 
   for (let x = firstDayIndex; x > 0; x--) {
     days += `<div class="prev-date">${prevLastDay - x + 1}</div>`;
+    // days.forEach(day => day.classList.add())
   }
 
   for (let i = 1; i <= lastDay; i++) {
@@ -76,12 +76,13 @@ const renderCalendar = () => {
       date.getMonth() === new Date().getMonth()
     ) {
       days += `<div class="today">${i}</div>`;
+    } else {
+      days += `<div class="day">${i}</div>`;
     }
-    days += `<div>${i}</div>`;
   }
 
   for (let j = 1; j <= nextDays; j++) {
-    days += `<div class ="next-date">${j}</div>`;
+    days += `<div class ="day">${j}</div>`;
     monthDays.innerHTML = days;
   }
 };
@@ -97,3 +98,12 @@ document.querySelector(".next").addEventListener("click", () => {
   date.setMonth(date.getMonth() + 1);
   renderCalendar();
 });
+
+const days = document.querySelectorAll(".day");
+
+days.forEach((day) =>
+  day.addEventListener("click", () => {
+    days.forEach((day) => day.classList.remove("selected"));
+    day.classList.add("selected");
+  })
+);

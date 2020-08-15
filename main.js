@@ -65,25 +65,41 @@ const renderCalendar = () => {
 
   let days = "";
 
+  //gets previous days of the months + greys out previous days from previous months
   for (let x = firstDayIndex; x > 0; x--) {
-    days += `<div class="prev-date">${prevLastDay - x + 1}</div>`;
-    // days.forEach(day => day.classList.add())
+    if (new Date().getMonth() >= date.getMonth()) {
+      days += `<div class="prev-date">${prevLastDay - x + 1}</div>`;
+    } else {
+      days += `<div class="day">${prevLastDay - x + 1}</div>`;
+    }
   }
 
+  //gets current days of the months + greys out previous days this month
   for (let i = 1; i <= lastDay; i++) {
     if (
       i === new Date().getDate() &&
       date.getMonth() === new Date().getMonth()
     ) {
       days += `<div class="today">${i}</div>`;
+    } else if (
+      (i < new Date().getDate() && date.getMonth() === new Date().getMonth()) ||
+      new Date().getMonth() > date.getMonth()
+    ) {
+      days += `<div class="prev-date">${i}</div>`;
     } else {
       days += `<div class="day">${i}</div>`;
     }
   }
 
+  //gets next days of the months + greys out previous months
   for (let j = 1; j <= nextDays; j++) {
-    days += `<div class ="day">${j}</div>`;
-    monthDays.innerHTML = days;
+    if (new Date().getMonth() <= date.getMonth()) {
+      days += `<div class ="day">${j}</div>`;
+      monthDays.innerHTML = days;
+    } else {
+      days += `<div class ="prev-date">${j}</div>`;
+      monthDays.innerHTML = days;
+    }
   }
 };
 
@@ -101,6 +117,7 @@ document.querySelector(".next").addEventListener("click", () => {
 
 const days = document.querySelectorAll(".day");
 
+//adds selected day background on click
 days.forEach((day) =>
   day.addEventListener("click", () => {
     days.forEach((day) => day.classList.remove("selected"));

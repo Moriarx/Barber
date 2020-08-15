@@ -359,6 +359,7 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    width: 100%;
   }
   .booking-tab {
     -ms-flex-preferred-size: 50%;
@@ -818,11 +819,11 @@ body {
   height: 50px;
   margin-top: 3px;
   font-size: 14px;
-  -webkit-transition: background-color 0.2s;
-  transition: background-color 0.2s;
+  -webkit-transition: background-color 0.1s;
+  transition: background-color 0.1s;
 }
 
-.days div:hover:not(.today), .days div:hover:not(.current) {
+.days div:hover:not(.today) {
   background-color: #262626;
   border: 2px solid #777;
   cursor: pointer;
@@ -843,5 +844,9 @@ body {
 
 .selected {
   background-color: lime;
+}
+
+.calendar {
+  width: 100%;
 }
 /*# sourceMappingURL=main.css.map */

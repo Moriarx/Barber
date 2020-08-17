@@ -364,10 +364,14 @@
   .booking-tab {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
   }
   .booking {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
+    max-width: 550px;
   }
 }
 
@@ -648,10 +652,10 @@ body {
   background: #000;
 }
 
-#aboutus .aboutus-main .aboutus-team h3,
-#aboutus .contact-main .aboutus-team h3,
-#contact .aboutus-main .aboutus-team h3,
-#contact .contact-main .aboutus-team h3 {
+#aboutus .aboutus-main .aboutus-team .underline,
+#aboutus .contact-main .aboutus-team .underline,
+#contact .aboutus-main .aboutus-team .underline,
+#contact .contact-main .aboutus-team .underline {
   position: relative;
   display: inline-block;
   margin-top: 3rem;
@@ -660,10 +664,10 @@ body {
   text-transform: uppercase;
 }
 
-#aboutus .aboutus-main .aboutus-team h3::after,
-#aboutus .contact-main .aboutus-team h3::after,
-#contact .aboutus-main .aboutus-team h3::after,
-#contact .contact-main .aboutus-team h3::after {
+#aboutus .aboutus-main .aboutus-team .underline::after,
+#aboutus .contact-main .aboutus-team .underline::after,
+#contact .aboutus-main .aboutus-team .underline::after,
+#contact .contact-main .aboutus-team .underline::after {
   content: "";
   height: 3px;
   width: 100%;
@@ -783,7 +787,7 @@ body {
 
 .weekdays div {
   font-size: 12px;
-  font-weight: 400;
+  font-weight: bold;
   letter-spacing: 1px;
   width: calc(100% / 7);
   display: -webkit-box;
@@ -819,6 +823,7 @@ body {
   height: 50px;
   margin-top: 3px;
   font-size: 14px;
+  font-weight: bold;
   -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
 }
@@ -832,14 +837,6 @@ body {
 .prev-date,
 .next-date {
   opacity: 0.5;
-}
-
-.today {
-  background-color: #975100;
-}
-
-.booking-tab {
-  background-color: #fff;
 }
 
 .selected {

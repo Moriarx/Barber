@@ -28,6 +28,7 @@ body {
 //***********************MAIN********************
 //ABOUT US
 
+
 #aboutus,
 #contact {
   text-align: center;
@@ -80,7 +81,7 @@ body {
       flex-basis: 50%;
       background: #000;
 
-      h3 {
+      .underline {
         position: relative;
         display: inline-block;
         margin-top: 3rem;
@@ -89,7 +90,7 @@ body {
         text-transform: uppercase;
       }
 
-      h3::after {
+      .underline::after {
         content: "";
         height: 3px;
         width: 100%;
@@ -183,7 +184,7 @@ body {
 
 .weekdays div {
   font-size: 12px;
-  font-weight: 400;
+  font-weight: bold;
   letter-spacing: 1px;
   width: calc(100% / 7);
   display: flex;
@@ -204,6 +205,7 @@ body {
   height: 50px;
   margin-top: 3px;
   font-size: 14px;
+  font-weight: bold;
   transition: background-color 0.2s;
 }
 
@@ -216,14 +218,6 @@ body {
 .prev-date,
 .next-date {
   opacity: 0.5;
-}
-
-.today {
-  background-color: #975100;
-}
-
-.booking-tab {
-  background-color: #fff;
 }
 
 .selected {

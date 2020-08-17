@@ -62,7 +62,7 @@ const renderCalendar = () => {
   ];
 
   document.querySelector(".date h2").innerHTML = months[date.getMonth()];
-  document.querySelector(".date p").innerHTML = new Date().toDateString();
+  document.querySelector(".date p").innerHTML = `Today is: ${new Date().toDateString()}`;
 
   let days = "";
 
@@ -81,16 +81,18 @@ const renderCalendar = () => {
       i === new Date().getDate() &&
       date.getMonth() === new Date().getMonth()
     ) {
-      days += `<div class="today">${i}</div>`;
-    } else if (
+      days += `<div class="day selected" id=${i}>${i}</div>`;
+    } else 
+    if (
       (i < new Date().getDate() && date.getMonth() === new Date().getMonth()) ||
       new Date().getMonth() > date.getMonth()
     ) {
       days += `<div class="prev-date">${i}</div>`;
     } else {
-      days += `<div class="day">${i}</div>`;
+      days += `<div class="day" id=${i}>${i}</div>`;
+      }
     }
-  }
+  
 
   //gets next days of the months + greys out previous months
   for (let j = 1; j <= nextDays; j++) {
@@ -104,7 +106,6 @@ const renderCalendar = () => {
   }
 };
 
-renderCalendar();
 
 document.querySelector(".prev").addEventListener("click", () => {
   date.setMonth(date.getMonth() - 1);
@@ -115,6 +116,7 @@ document.querySelector(".next").addEventListener("click", () => {
   date.setMonth(date.getMonth() + 1);
   renderCalendar();
 });
+renderCalendar();
 
 //get a selected background on click
 const days = document.getElementsByClassName("day");
@@ -124,4 +126,17 @@ document.addEventListener("click", function (e) {
     days[i].classList.remove("selected");
     e.target.classList.add("selected");
   }
+ // const x = date.setDate(date.getDate() + days.innerHTML)
+  
+
+
+  // function changeName (e){
+  // if (e.target.classList.contains("selected")){
+  //   const selectedDate = document.querySelector(".date p");
+
+  //   let selectedDay = (date.getDate())
+
+  // }}
 });
+
+

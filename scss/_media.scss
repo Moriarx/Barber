@@ -138,10 +138,12 @@
         width: 100%;
     }
     .booking-tab{
-        flex-basis: 50%;       
+        flex-basis: 50%;   
+        flex-grow: 1;
     }
     .booking {
         flex-basis: 50%;
+        max-width: 550px;
     }
     
     
